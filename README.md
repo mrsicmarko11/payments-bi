@@ -1,5 +1,5 @@
 # payments-bi
-note: demo-project in progress
+POC Project
 
 ## 1. GOAL: 
 Visualize the consumption of Croatian cities, i.e., enable easy monitoring of payments from the accounts of individual cities (how much, to whom, when, comparison of costs at the year, month, day...)
