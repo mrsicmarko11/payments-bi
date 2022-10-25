@@ -30,3 +30,5 @@ Power BI enables easy connection to SQL Server, i.e., easy import of data, i.e.,
 In the Power BI graphic display, I wanted to show some main features of the consumption of an individual city as simply as possible. Each visual is also a filter for some information, which makes it easier to find the necessary information.
 
 By choosing a city, for example, Samobor, the potential user of this display can see to whom and when a certain amount of funds was paid and for what purpose. I additionally highlighted some primary data (in the style of KPIs), added a graph for comparing consumption on an annual level, and a filter for selecting a legal or natural person.
+
+Example: https://github.com/mrsicmarko11/payments-bi/blob/main/BIView.PNG
