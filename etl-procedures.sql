@@ -13,9 +13,9 @@ AS
 	BEGIN
 		    --load_date za Gradove i Valute je u našem slučaju samo jedan dan pa sam ga postavio na taj datum
 			PRINT('Executing city.usp_Gradovi');
-			EXEC [city].[usp_Gradovi] '2022-05-03';
+			EXEC [city].[usp_Gradovi] @load_date;
 			PRINT('Executing city.usp_Valute');
-			EXEC [city].[usp_Valute] '2022-05-06';
+			EXEC [city].[usp_Valute] @load_date;
 			PRINT ('Executing city.usp_Primatelji');
 			EXEC [city].[usp_Primatelji] @load_date;
 			PRINT('Executing city.usp_Racuni');
