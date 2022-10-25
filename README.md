@@ -11,11 +11,10 @@ Visualize the consumption of Croatian cities, i.e., enable easy monitoring of pa
 
 2.3 After inserting the grad.Isplata table (which is crucial for the later creation of dimensional and fact tables in the RDL database, schema city), I add two more tables to the Stage database. The first is the grad.Gradovi. I use already existing data (tables) with a list of cities in Croatia (plus county, and municipality) - I insert a CSV file via the Tasks - Import Flat File option and add some columns, such as Latitude and Longitude, which will later be used to display cities geographically using BI tools. I also add the Sifra_grada column to the table, which is actually the "city" column from the table grad.Isplate and serves as a link between the tables
 
-## 3. RDL - Relation Database Layer
+## 3. Dimension tables
 This was followed by the normalization procedure of the data from the Stage tables. I created four dimension tables in the RDL database. All have a primary key (identity column) and key columns for a particular dimension. Here we pay attention to compliance with normalization norms.
 The tables I create are: city.DIM_Primatelji, city.DIM_Racuni, city.DIM_Gradovi, city.DIM_Valute
 
-## 4. Dimension tables
 I created four procedures, each of which inserts data into a separate dimension table.
 
 I use MERGE to insert the data into the target table - one of the dimensional ones from the source table - in this example, the source is a temporary table into which I put the data from the Stage table grad.Isplate and merged with the city.DIM_Primatelji table. The logic is that the insert of data from the source table occurs when the data in the target table does not exist. If they exist, then the data will be updated so that the data in the target table corresponds to the data in the source table.
